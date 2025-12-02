@@ -4,7 +4,9 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    def addTwoNumbers(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         dummy = cur = ListNode(0)
         carry = 0
         while l1 or l2 or carry:
@@ -17,6 +19,4 @@ class Solution:
             cur.next = ListNode(carry % 10)
             cur = cur.next
             carry //= 10
-        return dummy.next# leetcode
-Some leetcode and competitive programming problems
-
+        return dummy.next
